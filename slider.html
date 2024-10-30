@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #slayt_alani {
+        width: 1000px;
+        height: 450px;
+        border: 5px solid black;
+        position: relative;
+        /* kayan nesneleri tutan kapsayıcı div olduğu için relative olmalı */
+        overflow: hidden;
+      }
+      #sahneler {
+        width: 3000px;
+        height: 450px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        /* ! animasyon tanımlama */
+        animation-name: coffe_slayt;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        /* animation-delay: 4s; */
+        animation-timing-function: ease-in;
+        animation-direction: alternate;
+        /* animation-fill-mode: forwards; */
+      }
+      /* animasyon anahtar kareler tanımlama */
+      @keyframes coffe_slayt {
+        33% {
+          left: -1000px;
+        }
+        66% {
+          left: -2000px;
+        }
+      }
+
+      .kayanlar {
+        width: 1000px;
+        height: 450px;
+        float: left;
+        font-size: 30px;
+        color: white;
+        background-size: 1000px 450px;
+      }
+
+      /* fare ile üzerine gidince animasyonu durdurmak */
+      #sahneler:hover {
+        animation-play-state: paused;
+      }
+
+      #kayan1 {
+        background-image: url(images/banner.jpg);
+      }
+      #kayan2 {
+        background-image: url(images/banner2.jpg);
+      }
+      #kayan3 {
+        background-image: url(images/banner3.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slayt_alani">
+      <div id="sahneler">
+        <div class="kayanlar" id="kayan1">
+          <p>En İyi Kahve Mekanları</p>
+        </div>
+        <div class="kayanlar" id="kayan2">
+          <p>Yeni Fikirler, Yeni İçimler</p>
+        </div>
+        <div class="kayanlar" id="kayan3">
+          <p>Birlikye Yolculuğa Var mısınız?</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
