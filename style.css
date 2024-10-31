@@ -15,6 +15,7 @@ body {
   font-size: 16px;
   /* box-sizing: border-box; */
 }
+
 #page {
   width: 1000px;
   height: auto;
@@ -22,11 +23,13 @@ body {
   margin-right: auto;
   background-color: rgb(48, 9, 9);
 }
+
 #logo img {
   width: 200px;
   height: 200px;
   display: block;
 }
+
 #logo h1 {
   height: 50px;
   width: 200px;
@@ -35,16 +38,19 @@ body {
   padding-top: 8px;
   box-sizing: border-box;
 }
+
 .golge {
   /* box-shadow: 10px 50px 5px; */
   text-shadow: 5px 5px 8px grey;
 }
+
 .filtre {
   /* opacity: 0.2; */
   filter: blur(1px);
   /* filter: grayscale(100%); */
   /* filter: brightness(20%); */
 }
+
 nav {
   width: 680px;
   height: 50px;
@@ -53,12 +59,15 @@ nav {
   margin-top: 200px;
   margin-bottom: 5px;
 }
+
 #logo {
   float: left;
 }
+
 nav li {
   float: left;
 }
+
 nav a {
   display: block;
   width: 135px;
@@ -67,9 +76,11 @@ nav a {
   border-right: 3px solid #deab6e;
   box-sizing: border-box;
 }
+
 nav li:last-child a {
   border: none;
 }
+
 nav a:hover {
   background-color: #deab6e;
   color: white;
@@ -103,13 +114,16 @@ nav ul li:last-child {
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
+
 @keyframes degisen_arkaplan {
   25% {
     background-image: url(images/banner2.jpg);
   }
+
   50% {
     background-image: url(images/banner3.jpg);
   }
+
   75% {
     background-image: url(images/banner4.jpg);
   }
@@ -119,11 +133,13 @@ main {
   background-color: #543611;
   clear: both;
 }
+
 #bolum1,
 #bolum2 {
   height: 260px;
   margin-top: 40px;
 }
+
 .buyuk_resim {
   width: 340px;
   height: 260px;
@@ -132,6 +148,7 @@ main {
   float: left;
   box-sizing: border-box;
 }
+
 .yazi {
   width: 650px;
   height: 260px;
@@ -140,6 +157,7 @@ main {
   /* text-align: justify; */
   text-indent: 30px;
 }
+
 .arabosluk {
   margin-left: 10px;
 }
@@ -147,36 +165,213 @@ main {
 #bolum3 {
   height: 270px;
   margin-top: 20px;
-  margin-bottom: 10px;
 }
+
 #bolum3 div {
   width: 310px;
   height: 270px;
   float: left;
   margin-right: 35px;
 }
+
 .kucuk_resim {
   width: 310px;
   height: 210px;
   border: 5px solid #deab6e;
   box-sizing: border-box;
 }
+
+.bolum3-a-text a {
+  font-size: 20px;
+}
+
 .link {
   display: block;
-  line-height: 60px;
   text-align: center;
+
 }
+
 footer {
   border: 5px solid #deab6e;
   border-radius: 5px;
   height: 235px;
   box-sizing: border-box;
+
 }
+
 footer div {
   width: 300px;
-  height: 215px;
+  height: 235px;
   margin-top: 5px;
   margin-bottom: 5px;
-  margin-left: 25px;
   float: left;
+
+}
+
+.footer-a,
+.footer-b,
+.footer-c li,
+.footer-c h2 {
+  line-height: 40px;
+}
+
+.footer-a h2,
+.footer-b h2,
+.footer-c h2 {
+  font-size: 20px;
+  line-height: 60px;
+
+}
+
+.footer-b,
+.footer-c {
+  margin-left: 45px;
+}
+
+nav label,
+nav input {
+  display: none;
+}
+
+@media only screen and (max-width:576px) {
+  #page {
+    width: 100%;
+    height: auto;
+  }
+
+  #logo img {
+    display: none;
+  }
+
+  #logo h1 {
+    width: auto;
+    /*var olan bir genişlik değerini yok etmek istiyorsam auto veririm. 0 değil*/
+    height: auto;
+    padding: 0px;
+    line-height: 70px;
+    font-size: 30px;
+  }
+
+  nav {
+    width: 70px;
+    height: 70px;
+    /*kare bir butona benzettik*/
+    margin: 0px;
+    position: relative;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  #logo {
+    width: calc(100% - 70px);
+  }
+
+  nav label {
+    display: block;
+    font-size: 26px;
+    line-height: 70px;
+    text-align: center;
+  }
+
+  nav li {
+    float: none;
+  }
+
+  nav a {
+    width: auto;
+    padding: 8px 20px;
+    border: none;
+    font-size: 22px;
+  }
+
+  nav input:checked+ul {
+    display: block;
+    position: absolute;
+    /* z-index: 1000;  iki absolute üst üste gelseydi index ile istediğimiz absolute u öne alırdık */
+    top: 70px;
+    right: 0;
+    background-color: #deab6e;
+
+  }
+
+  #slayt {
+    height: 250px;
+    background-size: 100% 250px;
+  }
+
+  #bolum1,
+  #bolum2 {
+    height: auto;
+    margin-top: 20px;
+  }
+
+  #bolum1 img,
+  #bolum2 img {
+    display: none;
+  }
+
+  .yazi {
+    width: 100%;
+    height: auto;
+    float: none;
+    text-align: center;
+    text-indent: 0px;
+    font-size: 20px;
+  }
+
+  .arabosluk {
+    margin: 0;
+  }
+
+  #bolum1 p {
+    font-size: 20px;
+  }
+
+  #bolum2 p {
+    background-image: url(images/i3.jpg);
+    background-size: 70% 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #bolum3 {
+    height: auto;
+
+  }
+
+  #bolum3 div {
+    border: 5px solid #deab6e;
+    box-sizing: border-box;
+    height: 250px;
+    width: 80%;
+    float: none;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 0px;
+    /*ölçüsü yüzde cinsinden olan bir divi ortalamak istiyorsak margin right ile değil margin left ile ortala. margin right global ayarda varsa onu da sıfırla*/
+  }
+
+  .kucuk_resim {
+    width: 100%;
+    height: 190px;
+    border: none;
+  }
+
+  footer {
+    height: 50px;
+  }
+
+  .footer-a,
+  .footer-b,
+  .footer-c h2 {
+    display: none;
+  }
+
+
+  footer div {
+    float: none;
+    height: 10px;
+  }
 }
