@@ -361,11 +361,11 @@ nav input {
 
   footer {
     height: 50px;
+    border: none;
   }
 
   .footer-a,
-  .footer-b,
-  .footer-c h2 {
+  .footer-b {
     display: none;
   }
 
@@ -373,5 +373,39 @@ nav input {
   footer div {
     float: none;
     height: 10px;
+  }
+
+  .footer-c ul {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 280px;
+
+  }
+
+  .footer-c h2 {
+    display: none;
+  }
+
+  .footer-c ul li {
+    font-size: 24px;
+    text-align: center;
+
+  }
+
+  .footer-c ul li a i {
+    display: inline-block;
+  }
+
+  .footer-c ul li a i+span {
+    display: none;
+  }
+
+  .footer-c ul li a {
+    display: inline-block;
+    color: bisque;
+  }
+
+  .footer-c ul li a i {
+    font-size: 25px;
   }
 }
