@@ -201,7 +201,7 @@ footer {
 
 footer div {
   width: 300px;
-  height: 235px;
+  height: auto;
   margin-top: 5px;
   margin-bottom: 5px;
   float: left;
@@ -377,8 +377,11 @@ nav input {
 
   .footer-c ul {
     display: flex;
-    justify-content: space-around;
-    padding-left: 280px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+
 
   }
 
@@ -394,18 +397,161 @@ nav input {
 
   .footer-c ul li a i {
     display: inline-block;
+
   }
 
   .footer-c ul li a i+span {
     display: none;
+
   }
 
   .footer-c ul li a {
     display: inline-block;
     color: bisque;
+
   }
 
   .footer-c ul li a i {
     font-size: 25px;
+  }
+}
+
+@media only screen and ((min-width:576px) and (max-width:992px)) {
+  #page {
+    width: 100%;
+  }
+
+  #logo {
+    float: none;
+  }
+
+  #logo img {
+    display: none;
+  }
+
+  #logo h1 {
+    width: 100%;
+  }
+
+  nav {
+    width: 100%;
+    height: 60px;
+    float: none;
+    margin: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-left: calc((100% - 750px) / 2);
+  }
+
+  nav a {
+    width: 150px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    line-height: 60px;
+    font-size: 20px;
+  }
+
+  #slayt {
+    width: 100%;
+    height: 370px;
+    background-size: 100% 370px;
+  }
+
+  #bolum1,
+  #bolum2 {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .yazi {
+    width: calc(100% - 350px);
+    /*floatlı iki nesne var. birinin ölçüsü sabit ise diğerinin alta kaymaması için sabiti sayfa genişliğinden çıkarıyoruz*/
+    height: auto;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
+  #bolum2 p {
+    width: 100% !important;
+    float: none !important;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  #bolum2 img {
+    display: none;
+  }
+
+  #bolum3 {
+    height: 350px;
+  }
+
+  #bolum3 div {
+    width: calc((100% / 3) - 10px);
+    height: 350px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 5px solid #deab6e;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .kucuk_resim {
+    width: 100%;
+    height: 280px;
+    border: none;
+  }
+
+  .link {
+    line-height: 70px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  /* .footer-b {
+    display: none;
+  } */
+  footer div:nth-child(2) {
+    display: none;
+  }
+
+  footer {
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }
+
+  footer h2 {
+    display: none;
+  }
+
+  .footer-c {
+    margin-left: 0;
+  }
+
+  footer div {
+    width: 100%;
+    height: auto;
+    float: none;
+    text-align: center;
+  }
+
+  footer div:last-child {
+    order: 1;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  footer div:first-child {
+    order: 2;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  footer li {
+    float: left;
+    width: calc(100% / 4);
   }
 }
