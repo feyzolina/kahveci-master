@@ -440,7 +440,7 @@ nav input {
     margin: 0px;
     margin-bottom: 10px;
     text-align: center;
-    padding-left: calc((100% - 750px) / 2);
+    /* padding-left: calc((100% - 750px) / 2); */
   }
 
   nav a {
@@ -555,3 +555,7 @@ nav input {
     width: calc(100% / 4);
   }
 }
+
+/* * {
+  outline: 1px solid red;
+} */
